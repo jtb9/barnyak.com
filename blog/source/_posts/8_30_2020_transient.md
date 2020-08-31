@@ -1,7 +1,8 @@
 ---
 title: Transient (updates from gamescom 2020)
-featured_image: https://www.iceberg-games.com/wp-content/uploads/2019/06/highresscreenshot00021.jpg
+thumbnail: https://www.iceberg-games.com/wp-content/uploads/2019/06/highresscreenshot00021.jpg
 game: transient
+date: 8/30/2020
 categories:
     - game_news
 ---
