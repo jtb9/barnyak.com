@@ -1,0 +1,16 @@
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    <a href = "/"><div id="logo" style="background-image: url(/images/blogo_v4.svg);"></div></a>
+    <%- partial('_partial/post/title', { post: page, index: false, class_name: 'posttitle' }) %>
+    <div class="meta" style="margin-left: 70px;">
+      <%- partial('_partial/post/date', { post: page, class_name: 'postdate' }) %>
+      <%- partial('_partial/post/category') %>
+      <%- partial('_partial/post/tag') %>
+    </div>
+  </header>
+  <%- partial('_partial/post/gallery') %>
+  <div class="content" itemprop="articleBody">
+    <%- page.content %>
+  </div>
+</article>
+<%- partial('_partial/comments') %>
