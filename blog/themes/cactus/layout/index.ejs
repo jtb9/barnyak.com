@@ -4,12 +4,12 @@
   <% show_posts.each(function(post, i){ %>
     <% if (i <= 3) { %>
     <span class="featuredCard">
-      <a href = "<%- post.permalink %>">
-        <span class="featureCardInner">
-          <span class="featuredCardTitle"><%- partial('_partial/post/title', { post: post, index: true, class_name: '' }) %></span>
-          <img src="<%- post.thumbnail %>" class="featuredCardImage" />
-        </span>
-      </a>
+      <span class="featureCardInner">
+        <a href = "<%- post.permalink %>">
+          <span style="font-weight: bold;" class="featuredCardTitle"><%- partial('_partial/post/title', { post: post, index: true, class_name: '' }) %></span>
+        </a>
+        <img src="<%- post.thumbnail %>" class="featuredCardImage" />
+      </span>
     </span>
     <% } %>
   <% }); %>
