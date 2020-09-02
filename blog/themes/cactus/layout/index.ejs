@@ -19,7 +19,7 @@
 </section>
 
 <section id="writing" style="margin-bottom: 20px;">
-  <span class="h1">Latest Posts</span>
+  <span class="h1">More Stuff</span>
   <% if (theme.tags_overview && site.tags.length) { %>
   <span class="h2"><%= __('index.topics') %></span>
   <span class="widget tagcloud">
@@ -31,10 +31,12 @@
     <% var field_sort = theme.posts_overview.sort_updated ? 'updated' : 'date' %>
     <% var show_posts = page.posts.sort(field_sort, 'desc') %>
     <% show_posts.each(function(post, i){ %>
+      <% if (i >= 4) { %>
       <li class="post-item">
         <%- partial('_partial/post/date', { post: post, class_name: 'meta' }) %>
         <span><%- partial('_partial/post/title', { post: post, index: true, class_name: '' }) %></span>
       </li>
+      <% } %>
     <% }); %>
   </ul>
   <% if (theme.posts_overview.show_all_posts) { %>
