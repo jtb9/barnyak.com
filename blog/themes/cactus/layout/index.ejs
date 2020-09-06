@@ -2,7 +2,7 @@
   <% var field_sort = theme.posts_overview.sort_updated ? 'updated' : 'date' %>
   <% var show_posts = page.posts.sort(field_sort, 'desc') %>
   <% show_posts.each(function(post, i){ %>
-    <% if (i <= 3) { %>
+    <% if (i < 3) { %>
     <span class="featuredCard">
       <span class="featureCardInner">
         <a href = "<%- post.permalink %>">
@@ -31,7 +31,7 @@
     <% var field_sort = theme.posts_overview.sort_updated ? 'updated' : 'date' %>
     <% var show_posts = page.posts.sort(field_sort, 'desc') %>
     <% show_posts.each(function(post, i){ %>
-      <% if (i >= 4) { %>
+      <% if (i >= 3) { %>
       <li class="post-item">
         <%- partial('_partial/post/date', { post: post, class_name: 'meta' }) %>
         <span><%- partial('_partial/post/title', { post: post, index: true, class_name: '' }) %></span>
