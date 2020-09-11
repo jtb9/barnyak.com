@@ -23,6 +23,24 @@
 </section>
 
 <section id="writing" style="margin-bottom: 20px;">
+	<span class="h1">Game Radar</span>
+	<ul class="post-list">
+		<li class="post-item">
+			<span>
+				<a href = "https://www.mortalonline2.com/">Mortal Online 2</a> - classic sandbox "hardcore" mmorpg
+			</span>
+		</li>
+	</ul>
+
+	<span class="h1">Music Radar</span>
+	<ul class="post-list">
+		<li class="post-item">
+			<span>
+				<a href = "https://www.youtube.com/watch?v=1gX1EP6mG-E">Wagon Wheel</a> - Old Crow Medicine Show
+			</span>
+		</li>
+	</ul>
+
 	<span class="h1">More Stuff</span>
 	<% if (theme.tags_overview && site.tags.length) { %>
 	<span class="h2"><%= __('index.topics') %></span>
@@ -46,4 +64,8 @@
 	<% if (theme.posts_overview.show_all_posts) { %>
 	<%- partial('_partial/pagination') %>
 	<% } %>
+
+	<span style="display: block; margin: auto; margin-top: 40px; margin-bottom: 40px; width: 181px;">
+		<a href="https://twitter.com/JustinBarnyak?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @JustinBarnyak</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</span>
 </section>
