@@ -3,7 +3,7 @@ title: NASA Selects Robyn Gatens as Acting Director of ISS
 thumbnail: https://blogs.nasa.gov/spacestation/wp-content/uploads/sites/240/2020/08/blog_iss063e076166.jpg
 date: 8/31/2020
 categories:
-    - astronomy
+    - space_and_tech
 ---
 ## Topic: [International Space Station](https://www.nasa.gov/mission_pages/station/main/index.html)
 

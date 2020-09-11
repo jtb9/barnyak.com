@@ -30,10 +30,16 @@ body
   line-height: $line-height
   text-rendering: geometricPrecision
   flex: 1
+  padding-bottom: 10px
 
   antialias()
 
   @extend $base-style
+
+.footer-spacer
+  display: block
+  width: 100%
+  height: 20px
 
 .content
   position: relative
@@ -212,6 +218,7 @@ code
 
 .featuredCardImage
  	width: 100%
+  object-fit: cover
   padding-bottom: 10px
 
 .featuredCard a
@@ -219,6 +226,16 @@ code
   font-size: 1.1em
   margin-left: 0px
   padding-left: 0px
+
+#about
+ 	display: flex
+  flex-wrap: wrap;
+  flex-direction: row
+
+.featuredCard
+  width: 100% !important
+  height: 300px
+  margin-bottom: 20px
 
 #logo
   display: inline-block
@@ -231,3 +248,45 @@ code
   background-size: $logo-width $logo-height
   background-repeat: no-repeat
   -webkit-filter: grayscale(100%)
+
+a img
+  text-decoration: none !important
+  border: 0 none !important
+  underline(0px, transparent)
+.noStyleLink a
+  text-decoration: none !important
+  border: 0 none !important
+  underline(0px, transparent)
+.noStyleLink
+  text-decoration: none !important
+  border: 0 none !important
+  underline(0px, transparent)
+
+
+.hasTarget
+  cursor: pointer
+
+.featuredCardTitle
+ 	position: absolute
+  bottom: 0px
+  width: 100%
+  display: block
+  background-color: rgba(0,0,0,0.8)
+  padding-left: 10px
+  padding-top: 5px
+  padding-bottom: 5px
+
+.featuredCardTitle a
+ 	color: white !important
+
+.featureCardInner
+  display: block
+  height: 300px
+  position: relative
+  overflow: hidden
+
+@media screen and (max-width: 600px)
+  .featureCardInner
+    height: 200px
+  .featuredCard
+    height: 200px

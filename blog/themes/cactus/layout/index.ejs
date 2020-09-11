@@ -1,45 +1,49 @@
 <section id="about">
-  <% var field_sort = theme.posts_overview.sort_updated ? 'updated' : 'date' %>
-  <% var show_posts = page.posts.sort(field_sort, 'desc') %>
-  <% show_posts.each(function(post, i){ %>
-    <% if (i < 3) { %>
-    <span class="featuredCard">
-      <span class="featureCardInner">
-        <a href = "<%- post.permalink %>">
-          <span style="font-weight: bold;" class="featuredCardTitle"><%- partial('_partial/post/title', { post: post, index: true, class_name: '' }) %></span>
-        </a>
-        <img src="<%- post.thumbnail %>" class="featuredCardImage" />
-      </span>
-    </span>
-    <% } %>
-  <% }); %>
-  <% if (theme.posts_overview.show_all_posts) { %>
-    <%- partial('_partial/pagination') %>
-  <% } %>
+	<% var field_sort = theme.posts_overview.sort_updated ? 'updated' : 'date' %>
+	<% var show_posts = page.posts.sort(field_sort, 'desc') %>
+	<% show_posts.each(function(post, i){ %>
+	<% if (i < 6) { %>
+
+	<% if (i == 0 || i == 3) { %>
+	<span class="featuredCard featuredCardBig">
+		<% } else { %>
+		<span class="featuredCard">
+			<% } %>
+
+			<span class="featureCardInner">
+				<span style="font-weight: bold;" class="featuredCardTitle"><%- partial('_partial/post/title', { post: post, index: true, class_name: '' }) %></span>
+				<img onclick="document.location='<%- post.permalink %>';return false;" src="<%- post.thumbnail %>" class="featuredCardImage hasTarget" />
+			</span>
+		</span>
+		<% } %>
+		<% }); %>
+		<% if (theme.posts_overview.show_all_posts) { %>
+		<%- partial('_partial/pagination') %>
+		<% } %>
 </section>
 
 <section id="writing" style="margin-bottom: 20px;">
-  <span class="h1">More Stuff</span>
-  <% if (theme.tags_overview && site.tags.length) { %>
-  <span class="h2"><%= __('index.topics') %></span>
-  <span class="widget tagcloud">
-    <%- tagcloud(theme.tags_overview) %>
-  </span>
-  <span class="h2"><%= __('index.most_recent') %></span>
-  <% } %>
-  <ul class="post-list">
-    <% var field_sort = theme.posts_overview.sort_updated ? 'updated' : 'date' %>
-    <% var show_posts = page.posts.sort(field_sort, 'desc') %>
-    <% show_posts.each(function(post, i){ %>
-      <% if (i >= 3) { %>
-      <li class="post-item">
-        <%- partial('_partial/post/date', { post: post, class_name: 'meta' }) %>
-        <span><%- partial('_partial/post/title', { post: post, index: true, class_name: '' }) %></span>
-      </li>
-      <% } %>
-    <% }); %>
-  </ul>
-  <% if (theme.posts_overview.show_all_posts) { %>
-    <%- partial('_partial/pagination') %>
-  <% } %>
+	<span class="h1">More Stuff</span>
+	<% if (theme.tags_overview && site.tags.length) { %>
+	<span class="h2"><%= __('index.topics') %></span>
+	<span class="widget tagcloud">
+		<%- tagcloud(theme.tags_overview) %>
+	</span>
+	<span class="h2"><%= __('index.most_recent') %></span>
+	<% } %>
+	<ul class="post-list">
+		<% var field_sort = theme.posts_overview.sort_updated ? 'updated' : 'date' %>
+		<% var show_posts = page.posts.sort(field_sort, 'desc') %>
+		<% show_posts.each(function(post, i){ %>
+		<% if (i >= 6) { %>
+		<li class="post-item">
+			<%- partial('_partial/post/date', { post: post, class_name: 'meta' }) %>
+			<span><%- partial('_partial/post/title', { post: post, index: true, class_name: '' }) %></span>
+		</li>
+		<% } %>
+		<% }); %>
+	</ul>
+	<% if (theme.posts_overview.show_all_posts) { %>
+	<%- partial('_partial/pagination') %>
+	<% } %>
 </section>

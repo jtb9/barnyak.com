@@ -17,9 +17,9 @@ direction: ltr
 nav:
   home: /
   Search: /search/
-  Astronomy: /categories/astronomy/
-  Game News: /categories/game-news/
-  Game Reviews: /categories/game-reviews/
+  Space & Tech: /categories/space-and-tech/
+  Video Games: /categories/games/
+  Culture: /categories/culture/
   About: /about/
 
 

@@ -4,7 +4,7 @@ thumbnail: https://www.iceberg-games.com/wp-content/uploads/2019/06/highresscree
 game: transient
 date: 8/30/2020
 categories:
-    - game_news
+    - games
 ---
 ## Game: [Transient](https://www.iceberg-games.com/transient/)
 

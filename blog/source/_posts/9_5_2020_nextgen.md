@@ -1,9 +1,9 @@
 ---
-title: Next Generation Console Guide
+title: Next Generation Console Guide (Updated)
 thumbnail: https://compass-ssl.xbox.com/assets/17/f7/17f75c82-c959-4da6-a3ae-0fcedc8d751a.jpg?n=Xbox-Series-X_Image-1084_1920x1080_02.jpg
-date: 9/5/2020
+date: 9/8/2020
 categories:
-    - game_news
+    - games
 ---
 ![Xbox Series X](https://compass-ssl.xbox.com/assets/17/f7/17f75c82-c959-4da6-a3ae-0fcedc8d751a.jpg?n=Xbox-Series-X_Image-1084_1920x1080_02.jpg)
 
@@ -26,6 +26,7 @@ Here’s the short version of everything you need to know about “The Next Gene
 * Backwards Compatible with Older Games
 * Huge leaps in Hardware Performance
 * 4K BluRay
+* Smaller and cheaper digital versions.  Both still flaunting 4K at 120FPS.
 
 ![Play Station 5](https://asia.playstation.com/content/dam/pscom/hk/latest-news/2020/20200612-ps5/ps5.jpg)
 
@@ -44,3 +45,6 @@ Here’s the short version of everything you need to know about “The Next Gene
 * Dark Tide
 * Scarlet Nexus
 
+#### Update: 9/8/2020 an Xbox digital version has now been announced.  It's priced very well at $300 USD.
+
+![Xbox Digital](https://andromeda-code-blog-cdn.s3.us-east-2.amazonaws.com/EhX82n1UYAATqsI.jpeg)

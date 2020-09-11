@@ -3,7 +3,7 @@ title: World of Warcraft Shadowlands Release Date Announced
 thumbnail: https://andromeda-code-blog-cdn.s3.us-east-2.amazonaws.com/shadowlands/WoW_Summit_PressKit_NightFaeCovenantHall_3840x2160.jpg
 date: 8/29/2020
 categories:
-    - game_news
+    - games
 ---
 ## Game: [World of Warcraft](https://worldofwarcraft.com/en-us/)
 

@@ -3,7 +3,7 @@ title: Planet 9 May be Smoking Gun For 2 Stars in Our Solary System
 thumbnail: https://exoplanets.nasa.gov/system/internal_resources/details/original/701_Planet_nine_orbits.png
 date: 9/2/2020
 categories:
-    - astronomy
+    - space_and_tech
 ---
 ## Topic: [Planet Nine](https://en.wikipedia.org/wiki/Planet_Nine)
 
