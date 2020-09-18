@@ -1,0 +1,24 @@
+{
+    "sections": [
+      {
+        "title": "Music",
+        "links": [
+          {
+            "url": "https://google.com",
+            "title": "sec1",
+            "date": "9/18/2020"
+          }
+        ]
+      },
+      {
+        "title": "Video Games",
+        "links": [
+          {
+            "url": "https://albiononline.com/",
+            "title": "Albion Online",
+            "date": "9/18/2020"
+          }
+        ]
+      }
+    ]
+  }

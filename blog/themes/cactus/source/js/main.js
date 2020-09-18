@@ -10,12 +10,74 @@ if (!!$.prototype.justifiedGallery) {
   $(".article-gallery").justifiedGallery(options);
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
+
+  const radarContent = $("#radarContent");
+  if (radarContent.length !== 0) {
+    // Load our radar content
+    const radarContent = {
+      "sections": [
+        {
+          "title": "Music",
+          "links": [
+            {
+              "url": "https://trampledbyturtles.com",
+              "title": "Trampled By Turtles (Life is Good on the Open Road)",
+              "date": "9/18/2020"
+            }
+          ]
+        },
+        {
+          "title": "Video Games",
+          "links": [
+            {
+              "url": "https://albiononline.com/",
+              "title": "Albion Online",
+              "date": "9/18/2020"
+            }
+          ]
+        }
+      ]
+    }  
+
+    // Keep a working "buffer" of what this is going to look like
+    let pageDisplayBuffer = '';
+
+    for (let i = 0; i < radarContent.sections.length; i++) {
+      const section = radarContent.sections[i];
+
+      const sectionTitle = section.title;
+
+      pageDisplayBuffer += '<div class="radarSectionWrapper"><div class="radarSection"><p class="radarSectionTitle">';
+      pageDisplayBuffer += sectionTitle;
+      pageDisplayBuffer += '</p><span class="radarSectionList"><ul>';
+
+      for (let l = 0; l < section.links.length; l++) {
+        const sectionLink      = section.links[l];
+        const sectionLinkURL   = sectionLink.url;
+        const sectionLinkTitle = sectionLink.title;
+        const sectionLinkDate  = sectionLink.date;
+
+        pageDisplayBuffer += '<li><a href = "';
+        pageDisplayBuffer += sectionLinkURL;
+        pageDisplayBuffer += '">';
+        pageDisplayBuffer += sectionLinkTitle;
+        pageDisplayBuffer += '</a><p class="radarListDate">';
+        pageDisplayBuffer += sectionLinkDate;
+        pageDisplayBuffer += '</p><div class="clearfix"/></li>';
+      }
+
+      pageDisplayBuffer += '</ul></span></span></div></div>';
+    }
+
+    // Apply it
+    $("#radarContent").html(pageDisplayBuffer);
+  }
 
   /**
    * Shows the responsive navigation menu on mobile.
    */
-  $("#header > #nav > ul > .icon").click(function() {
+  $("#header > #nav > ul > .icon").click(function () {
     $("#header > #nav > ul").toggleClass("responsive");
   });
 
@@ -40,7 +102,7 @@ $(document).ready(function() {
     /**
      * Display the menu if the menu icon is clicked.
      */
-    menuIcon.click(function() {
+    menuIcon.click(function () {
       if (menu.css("visibility") === "hidden") {
         menu.css("visibility", "visible");
         menuIcon.addClass("active");
@@ -55,7 +117,7 @@ $(document).ready(function() {
      * Add a scroll listener to the menu to hide/show the navigation links.
      */
     if (menu.length) {
-      $(window).on("scroll", function() {
+      $(window).on("scroll", function () {
         var topDistance = menu.offset().top;
 
         // hide only the navigation links on desktop
@@ -67,10 +129,10 @@ $(document).ready(function() {
 
         // on tablet, hide the navigation icon as well and show a "scroll to top
         // icon" instead
-        if ( ! $( "#menu-icon" ).is(":visible") && topDistance < 50 ) {
+        if (!$("#menu-icon").is(":visible") && topDistance < 50) {
           $("#menu-icon-tablet").show();
           $("#top-icon-tablet").hide();
-        } else if (! $( "#menu-icon" ).is(":visible") && topDistance > 100) {
+        } else if (!$("#menu-icon").is(":visible") && topDistance > 100) {
           $("#menu-icon-tablet").hide();
           $("#top-icon-tablet").show();
         }
@@ -81,12 +143,12 @@ $(document).ready(function() {
      * Show mobile navigation menu after scrolling upwards,
      * hide it again after scrolling downwards.
      */
-    if ($( "#footer-post").length) {
+    if ($("#footer-post").length) {
       var lastScrollTop = 0;
-      $(window).on("scroll", function() {
+      $(window).on("scroll", function () {
         var topDistance = $(window).scrollTop();
 
-        if (topDistance > lastScrollTop){
+        if (topDistance > lastScrollTop) {
           // downscroll -> show menu
           $("#footer-post").hide();
         } else {
