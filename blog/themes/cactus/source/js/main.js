@@ -12,66 +12,44 @@ if (!!$.prototype.justifiedGallery) {
 
 $(document).ready(function () {
 
-  const radarContent = $("#radarContent");
-  if (radarContent.length !== 0) {
-    // Load our radar content
-    const radarContent = {
-      "sections": [
-        {
-          "title": "Music",
-          "links": [
-            {
-              "url": "https://trampledbyturtles.com",
-              "title": "Trampled By Turtles (Life is Good on the Open Road)",
-              "date": "9/18/2020"
-            }
-          ]
-        },
-        {
-          "title": "Video Games",
-          "links": [
-            {
-              "url": "https://albiononline.com/",
-              "title": "Albion Online",
-              "date": "9/18/2020"
-            }
-          ]
+  const radarhook = $("#radarContent");
+  if (radarhook.length !== 0) {
+    const radarHref = 'https://barnyak.com/radar_content.json';
+
+    $.getJson(radarHref, (radarContent) {
+      // Keep a working "buffer" of what this is going to look like
+      let pageDisplayBuffer = '';
+
+      for (let i = 0; i < radarContent.sections.length; i++) {
+        const section = radarContent.sections[i];
+
+        const sectionTitle = section.title;
+
+        pageDisplayBuffer += '<div class="radarSectionWrapper"><div class="radarSection"><p class="radarSectionTitle">';
+        pageDisplayBuffer += sectionTitle;
+        pageDisplayBuffer += '</p><span class="radarSectionList"><ul>';
+
+        for (let l = 0; l < section.links.length; l++) {
+          const sectionLink = section.links[l];
+          const sectionLinkURL = sectionLink.url;
+          const sectionLinkTitle = sectionLink.title;
+          const sectionLinkDate = sectionLink.date;
+
+          pageDisplayBuffer += '<li><a href = "';
+          pageDisplayBuffer += sectionLinkURL;
+          pageDisplayBuffer += '">';
+          pageDisplayBuffer += sectionLinkTitle;
+          pageDisplayBuffer += '</a><p class="radarListDate">';
+          pageDisplayBuffer += sectionLinkDate;
+          pageDisplayBuffer += '</p><div class="clearfix"/></li>';
         }
-      ]
-    }  
 
-    // Keep a working "buffer" of what this is going to look like
-    let pageDisplayBuffer = '';
+        pageDisplayBuffer += '</ul></span></span></div></div>';
 
-    for (let i = 0; i < radarContent.sections.length; i++) {
-      const section = radarContent.sections[i];
-
-      const sectionTitle = section.title;
-
-      pageDisplayBuffer += '<div class="radarSectionWrapper"><div class="radarSection"><p class="radarSectionTitle">';
-      pageDisplayBuffer += sectionTitle;
-      pageDisplayBuffer += '</p><span class="radarSectionList"><ul>';
-
-      for (let l = 0; l < section.links.length; l++) {
-        const sectionLink      = section.links[l];
-        const sectionLinkURL   = sectionLink.url;
-        const sectionLinkTitle = sectionLink.title;
-        const sectionLinkDate  = sectionLink.date;
-
-        pageDisplayBuffer += '<li><a href = "';
-        pageDisplayBuffer += sectionLinkURL;
-        pageDisplayBuffer += '">';
-        pageDisplayBuffer += sectionLinkTitle;
-        pageDisplayBuffer += '</a><p class="radarListDate">';
-        pageDisplayBuffer += sectionLinkDate;
-        pageDisplayBuffer += '</p><div class="clearfix"/></li>';
+        // Apply it
+        $("#radarContent").html(pageDisplayBuffer);
       }
-
-      pageDisplayBuffer += '</ul></span></span></div></div>';
-    }
-
-    // Apply it
-    $("#radarContent").html(pageDisplayBuffer);
+    });
   }
 
   /**
