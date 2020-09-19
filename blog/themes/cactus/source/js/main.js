@@ -16,7 +16,7 @@ $(document).ready(function () {
   if (radarhook.length !== 0) {
     const radarHref = 'https://barnyak.com/radar_content.json';
 
-    $.getJson(radarHref, (radarContent) {
+    $.getJSON(radarHref, function(radarContent) {
       // Keep a working "buffer" of what this is going to look like
       let pageDisplayBuffer = '';
 
