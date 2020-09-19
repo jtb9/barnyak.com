@@ -78,7 +78,7 @@ logo:
   enabled: true
   width: 50
   height: 50
-  url: /images/blogo_v4.svg
+  url: https://s3.amazonaws.com/barnyak.com/barnyak_logo_v2.svg
   gravatar: false
 
 # Customize the favicons.
