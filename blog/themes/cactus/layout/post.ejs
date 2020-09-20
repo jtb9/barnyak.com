@@ -1,6 +1,10 @@
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header>
-    <a href = "/"><div id="logo" style="background-image: url(/images/blogo_v4.svg);"></div></a>
+    <div id="postLogoRegion">
+      <a href = "/">
+        <div id="logo" style="background-image: url(https://s3.amazonaws.com/barnyak.com/barnyak_logo_v3.svg);"></div>
+      </a>
+    </div>
     <%- partial('_partial/post/title', { post: page, index: false, class_name: 'posttitle' }) %>
     <div class="meta" style="margin-left: 70px;">
       <%- partial('_partial/post/date', { post: page, class_name: 'postdate' }) %>

@@ -15,12 +15,9 @@ direction: ltr
 # navigation menu. Optionally, you can add translations for the 'Key' in
 # languages/*.yml
 nav:
-  home: /
-  Search: /search/
-  Space & Tech: /categories/space-and-tech/
+  Technology: /categories/space-and-tech/
   Video Games: /categories/games/
   Culture: /categories/culture/
-  About: /about/
 
 
 # Links to your social media accounts.
@@ -78,7 +75,7 @@ logo:
   enabled: true
   width: 50
   height: 50
-  url: https://s3.amazonaws.com/barnyak.com/barnyak_logo_v2.svg
+  url: https://s3.amazonaws.com/barnyak.com/barnyak_logo_v3.svg
   gravatar: false
 
 # Customize the favicons.
@@ -151,4 +148,4 @@ baidu_analytics:
 # Fill in you Gravatar user id / email if you want to use your gravatar as the
 # logo and/or favicons of you website.
 gravatar:
-  email: name@email.com
+  email: justin@barnyak.com

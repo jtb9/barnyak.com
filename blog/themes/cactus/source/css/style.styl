@@ -14,7 +14,7 @@ html
   margin: 0
   padding: 0
   height: 100%
-  border-top: 2px solid $color-text
+  border-top: 2px solid $color-dark-grey
   -webkit-text-size-adjust: 100%
   -ms-text-size-adjust: 100%
 
@@ -39,7 +39,7 @@ body
 .footer-spacer
   display: block
   width: 100%
-  height: 20px
+  height: 170px
 
 .content
   position: relative
@@ -363,30 +363,71 @@ a img
   100% { transform: rotate(360deg); }
 
 
-.content {
- 	 	margin-top: 20px;
+.content
+  margin-top: 20px;
   padding-top: 0px;
-}
 
-#header {
+#header
  	margin-top: 50px;
-  	position: relative;
-}
+  position: relative;
 
-#header #logo {
+#header #logo 
  	position: absolute;
-  	top: -50px;
-  	background-size: cover;
-  	width: 130px;
-  	height: 40px;
-  	border-radius: 0px;
-}
+  top: -50px;
+  background-size: cover;
+  width: 150px;
+  height: 48px;
+  border-radius: 0px;
 
-#logo svg {
+#logo svg
  	width: 300px; 
-}
 
-#nav {
+#nav
  	margin-top: 20px
-	  
-}
+
+.post #logo
+ 	background-size: cover;
+  width: 150px;
+  height: 48px;
+  border-radius: 0px;
+
+#postLogoRegion
+ 	display: block;
+  width: 100%;
+  height: 48px;
+
+.posttitle
+  margin: 0px !important;
+  margin-top: 15px !important;
+  text-align: left !important
+
+.meta 
+ 	margin: 0px !important; 
+
+.post .content h2
+ 	margin-top: 20px;
+  margin-left: 15px;
+
+.post .content img
+ 	max-width: 100vw;
+  width: 120% !important;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateX(-50%);
+  left: 50%;
+  position: relative;
+  
+.index #nav
+ 	display: block
+  margin: auto
+  margin-top: 30px
+
+.py4 .content
+ 	margin-top: 0px
+
+.py4 h1
+ 	text-align: center
+
+.py4 h4
+ 	text-align: center
+  display: block
