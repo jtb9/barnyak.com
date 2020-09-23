@@ -15,9 +15,9 @@ direction: ltr
 # navigation menu. Optionally, you can add translations for the 'Key' in
 # languages/*.yml
 nav:
-  Technology: /categories/space-and-tech/
+  Space: /categories/space/
   Video Games: /categories/games/
-  Culture: /categories/culture/
+  Technology: /categories/tech/
 
 
 # Links to your social media accounts.

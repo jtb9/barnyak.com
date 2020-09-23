@@ -4,7 +4,7 @@ thumbnail: https://cdn.barnyak.com/auto/PIA00271.jpg
 date: 9/14/2020
 description: Recently some analysis was done on the findings of the JCMT and ALMA telescopes that provides evidence with...
 categories:
-    - space_and_tech
+    - space
 ---
 ## Topic: [Astrobiology](https://astrobiology.nasa.gov/)
 ### Sub-Topic: [Venus](https://en.wikipedia.org/wiki/Venus)

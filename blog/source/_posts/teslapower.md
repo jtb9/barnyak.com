@@ -3,7 +3,7 @@ title: The Future of Wireless Power
 thumbnail: https://upload.wikimedia.org/wikipedia/commons/e/e9/Nikola_Tesla%2C_with_his_equipment_EDIT.jpg
 date: 9/9/2020
 categories:
-    - space_and_tech
+    - tech
 ---
 ## Topic: [Nikola Tesla](https://en.wikipedia.org/wiki/Nikola_Tesla)
 ![Tesla Himself](https://upload.wikimedia.org/wikipedia/commons/e/e9/Nikola_Tesla%2C_with_his_equipment_EDIT.jpg)

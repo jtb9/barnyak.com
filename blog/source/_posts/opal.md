@@ -3,7 +3,7 @@ title: New OPAL Jupiter Images
 thumbnail: https://www.nasa.gov/sites/default/files/thumbnails/image/stsci-h-p2042a-f-1663x1663.png
 date: 9/18/2020
 categories:
-    - space_and_tech
+    - space
 ---
 ## Topic: [Jupiter](https://solarsystem.nasa.gov/planets/jupiter/overview/)
 ![Jupiter](https://www.nasa.gov/sites/default/files/thumbnails/image/stsci-h-p2042a-f-1663x1663.png)
