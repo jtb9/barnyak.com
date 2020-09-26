@@ -1,12 +1,32 @@
 {
     "sections": [
       {
+        "title": "Stuff",
+        "links": [
+          {
+            "url": "https://www.frightprops.com",
+            "title": "Fright Props",
+            "date": "9/24/2020"
+          },
+          {
+            "url": "https://williamoptics.com/spacecat-limited-edition",
+            "title": "SpaceCat 51 Telescope",
+            "date": "9/25/2020"
+          },
+        ]
+      },
+      {
         "title": "Music",
         "links": [
           {
             "url": "https://crowmedicine.com",
             "title": "Old Crow Medicine Show",
             "date": "9/18/2020"
+          },
+          {
+            "url": "",
+            "title": "Dominic Fike",
+            "date": "9/25/2020"
           },
           {
             "url": "https://www.youtube.com/watch?v=zqMbvEVXZiE",
@@ -22,6 +42,26 @@
             "url": "https://albiononline.com/",
             "title": "Albion Online",
             "date": "9/18/2020"
+          },
+          {
+            "url": "https://mortalonline.squarespace.com",
+            "title": "Mortal Online",
+            "date": "9/26/2020"
+          },
+          {
+            "url": "https://www.ninedotsstudio.com/outward",
+            "title": "Outward",
+            "date": "9/26/2020"
+          },
+          {
+            "url": "https://totalmayhemgames.com/games/we-were-here-together/",
+            "title": "We Were Here Together",
+            "date": "9/26/2020"
+          },
+          {
+            "url": "https://www.avorion.net",
+            "title": "Avorion",
+            "date": "9/26/2020"
           }
         ]
       }
