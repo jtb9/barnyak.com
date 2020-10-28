@@ -13,6 +13,11 @@
             "title": "SpaceCat 51 Telescope",
             "date": "9/25/2020"
           },
+          {
+            "url": "https://acoup.blog",
+            "title": "Unmitigated Pedantry",
+            "date": "10/1/2020"
+          }
         ]
       },
       {
@@ -24,7 +29,7 @@
             "date": "9/18/2020"
           },
           {
-            "url": "",
+            "url": "https://dominicfike.com/",
             "title": "Dominic Fike",
             "date": "9/25/2020"
           },
@@ -32,6 +37,11 @@
             "url": "https://www.youtube.com/watch?v=zqMbvEVXZiE",
             "title": "Sara Bareilles (More Love)",
             "date": "9/18/2020"
+          },
+          {
+            "url": "",
+            "title": "",
+            "date": "10/6/2020"
           }
         ]
       },
@@ -62,6 +72,10 @@
             "url": "https://www.avorion.net",
             "title": "Avorion",
             "date": "9/26/2020"
+          },{
+            "url": "https://www.supergiantgames.com/games/hades/",
+            "title": "Hades",
+            "date": "9/28/2020"
           }
         ]
       }
