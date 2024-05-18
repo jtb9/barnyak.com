@@ -7,16 +7,17 @@ title: Barnyak
 subtitle: 'Video Games and Space News'
 description: 'Video Games and Space News.  A collection of interesting things, reviews and my take on techish news.'
 keywords:
-    - News
-    - Video Games
-    - Games
-    - Astronomy
-    - Space
-    - Culture
-    - Future
-    - Futurism
-    - Reviews
-    - Music
+- News
+- Video Games
+- Games
+- Astronomy
+- Space
+- Culture
+- Future
+- Futurism
+- Reviews
+- Music
+- Photography
 author: Justin Barnyak
 language: en
 timezone: 'America/New_York'
@@ -111,13 +112,13 @@ ignore:
 theme: cactus
 
 plugin:
-  - hexo-generator-category-enhance
-  - hexo-generator-feed
-  - hexo-asset-image
-  - hexo-prism-plugin
-  - hexo-toc
-  - hexo-generator-sitemap
-  # ... other plugins you'd like to enable
+- hexo-generator-category-enhance
+- hexo-generator-feed
+- hexo-asset-image
+- hexo-prism-plugin
+- hexo-toc
+- hexo-generator-sitemap
+# ... other plugins you'd like to enable
 
 sitemap:
   path: sitemap.xml
@@ -153,7 +154,7 @@ feed:
 prism_plugin:
   mode: 'preprocess'
   theme: 'default'
-  line_number: true 
+  line_number: true
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
