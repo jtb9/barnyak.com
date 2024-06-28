@@ -65,7 +65,7 @@ html, body, #root {
 
 .articleList {
   margin-top: 20px;
-  width: 750px;
+  max-width: 750px;
   margin-left: auto;
   margin-right: auto;
 }
