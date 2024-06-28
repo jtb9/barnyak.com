@@ -4,7 +4,10 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 // import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "@tsparticles/slim";
 
-export default function ParticleContainer() {
+interface Props {
+  children: any;
+}
+export default function ParticleContainer(props: Props) {
   const [init, setInit] = useState(false);
 
   // this should be run only once per application lifetime
@@ -31,7 +34,7 @@ export default function ParticleContainer() {
       "delay": 0,
       "fullScreen": {
         "enable": true,
-        "zIndex": 0
+        "zIndex": -1
       },
       "detectRetina": true,
       "duration": 0,
@@ -518,14 +521,21 @@ export default function ParticleContainer() {
 
   if (init) {
     return (
-      <Particles
-        //@ts-ignore
-        id="tsparticles"
-        //@ts-ignore
-        options={options}
-      />
+      <>
+        <Particles
+          //@ts-ignore
+          id="tsparticles"
+          //@ts-ignore
+          options={options}
+        >
+
+        </Particles>
+        {props.children}
+      </>
     );
   }
 
-  return <></>;
+  return <>
+    {props}
+  </>;
 }

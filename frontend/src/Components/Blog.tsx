@@ -80,23 +80,24 @@ export default function Blog() {
 
     return (
         <articleContext.Provider value={article}>
-            <div style={{zIndex: '10'}} className="App">
-                <Navbar onChange={(newPath: string) => {
-                    setPath(newPath);
-                    setArticle(undefined);
-                    onChange();
-                }} />
-                {article ? <Article onBack={() => {
-                    setArticle(undefined);
-                    onChange();
-                }} /> : <ArticleList choseArticle={(newArticle: any) => {
-                    setArticle(newArticle);
-                    onChange();
-                }} category={path} />}
-                <Footer />
-                
-            </div>
-            {/* <ParticleContainer /> */}
+            <ParticleContainer>
+                <div className="App">
+                    <Navbar onChange={(newPath: string) => {
+                        setPath(newPath);
+                        setArticle(undefined);
+                        onChange();
+                    }} />
+                    {article ? <Article onBack={() => {
+                        setArticle(undefined);
+                        onChange();
+                    }} /> : <ArticleList choseArticle={(newArticle: any) => {
+                        setArticle(newArticle);
+                        onChange();
+                    }} category={path} />}
+                    <Footer />
+                    
+                </div>
+            </ParticleContainer>
         </articleContext.Provider>
     );
 }
