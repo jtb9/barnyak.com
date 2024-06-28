@@ -3,6 +3,7 @@ import Markdown from "react-markdown";
 import ArticleMetadata from "./ArticleMetadata";
 import { articleContext } from "./Blog";
 import { useContext } from "react";
+import Image from './Image';
 
 interface Props {
     onBack: () => void;
@@ -15,7 +16,12 @@ export default function Article(props: Props) {
         <Stack className="paperInner" sx={{padding: '15px'}} justifyContent={"center"} direction="column">
             <div className="singleArticleTitle">{article.title}</div>
             <ArticleMetadata article={article} />
-            <Markdown>
+            <Markdown components={{
+                image(props) {
+                    //@ts-ignore
+                    return <Image {...props} />
+                }
+            }}>
                 {article.content}
             </Markdown>
             <Button variant="outlined" onClick={() => {

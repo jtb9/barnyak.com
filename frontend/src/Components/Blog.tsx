@@ -90,7 +90,7 @@ export default function Blog() {
                     {article ? <Article onBack={() => {
                         setArticle(undefined);
                         onChange();
-                    }} /> : <ArticleList choseArticle={(newArticle: any) => {
+                    }} /> : <ArticleList key={path} choseArticle={(newArticle: any) => {
                         setArticle(newArticle);
                         onChange();
                     }} category={path} />}

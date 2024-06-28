@@ -30,7 +30,7 @@ export default function Navbar(props: Props) {
     ]
 
     const renderNavOption = (path: string, label: string) => {
-        return <div className="navOption" onClick={() => {
+        return <div key={`nav-${label}`} className="navOption" onClick={() => {
             if (path.includes("https://")) {
                 //@ts-ignore
                 window.open(path, '_blank').focus();
