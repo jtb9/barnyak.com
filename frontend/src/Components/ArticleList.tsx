@@ -305,7 +305,9 @@ export default function ArticleList(props: Props) {
       <ArticleMetadata article={blob} />
       <div className="articleSummary">
         <Stack direction="column">
-          <Image className="articleThumbnail" alt="Article Thumbnail" src={thumbnail} />
+          <Image onClick={() => {
+            props.choseArticle(blob);
+          }} className="articleThumbnail" alt="Article Thumbnail" src={thumbnail} />
         </Stack>
       </div>
     </div>

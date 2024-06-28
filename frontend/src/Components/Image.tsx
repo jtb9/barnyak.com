@@ -2,14 +2,18 @@ interface Props {
     src: string;
     alt: string;
     className?: string;
+    onClick?: any;
 }
 
 export default function Image(props: Props) {
     const {
         className,
         alt,
-        src
+        src,
+        onClick
     } = props;
 
-    return <img className={className} alt={alt} src={src} />
+    return <img style={{
+        cursor: 'pointer'
+    }} onClick={onClick} className={className} alt={alt} src={src} />
 }
