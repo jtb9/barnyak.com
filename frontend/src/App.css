@@ -19,9 +19,19 @@ html, body, #root {
 
 .navOption {
   text-decoration: underline;
-  text-decoration-color: white;
+  text-decoration-color: rgba(0, 0, 0, 0.248);
   padding-top: 15px;
   cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+.blogLogo {
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+.blogLogo:hover {
+  transform: scale(1.1)
 }
 
 .navOption:hover {
@@ -34,16 +44,30 @@ html, body, #root {
   padding-right: 20px;
 }
 
-.articleList {
-  display: flex;
-  flex-direction: column;
+.paper {
   border: 1px solid rgba(0, 0, 0, 0.548);
   border-radius: 8px;
   padding: 5px;
+}
+
+.paperInner {
+  padding: 1px;
+  border: 1px solid rgba(0, 0, 0, 0.248);
+  border-radius: 8px;
+  
+  background-color: #f8f8f8;
+}
+
+.articleListInner {
+  display: flex;
+  flex-direction: column;
+}
+
+.articleList {
+  margin-top: 20px;
   width: 750px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px;
 }
 
 .articleThumbnail {
@@ -62,6 +86,7 @@ html, body, #root {
 .articleTitle {
   font-size: 1.5rem;
   cursor: pointer;
+  transition: all 0.2s ease-out;
 }
 
 .singleArticleTitle {
@@ -91,9 +116,11 @@ html, body, #root {
   max-width: 800px;
   margin: auto;
   margin-top: 20px;
-  padding: 40px;
 }
 
 .singleArticle img {
-  max-width: 800px;
+  max-width: 795px;
+  width: calc(100% + 28px);
+  position: relative;
+  left: -14px;
 }

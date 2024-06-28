@@ -327,7 +327,9 @@ export default function ArticleList(props: Props) {
         return articles;
     }
 
-    return <div className="articleList">
-        {renderArticles()}
+    return <div className="articleList paper">
+      <div className="articleListInner paperInner">
+          {renderArticles()}
+        </div>
     </div>
 }

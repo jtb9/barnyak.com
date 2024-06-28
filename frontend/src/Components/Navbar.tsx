@@ -1,4 +1,4 @@
-import { Stack } from "@mui/material";
+import { Divider, Stack } from "@mui/material";
 import Logo from "./Logo";
 
 interface Props {
@@ -52,10 +52,12 @@ export default function Navbar(props: Props) {
     }
 
     return <Stack direction="column">
-        <Stack direction="row" justifyContent={"center"}><Logo /></Stack>
-        <div className="navBar">
+        <Stack direction="row" justifyContent={"center"}><Logo navigateHome={() => {
+            props.onChange("home");
+        }} /></Stack>
+        <Stack direction="row" divider={<Divider sx={{height: '20px', position: 'relative', top: '15px'}} orientation="vertical" flexItem />} className="navBar">
 
             {options}
-        </div>
+        </Stack>
     </Stack>
 }
