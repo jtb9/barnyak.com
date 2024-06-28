@@ -1,20 +1,15 @@
 html, body, #root {
   width: 100%;
   height: 100%;
-  background-color: rgb(212, 220, 255);
+  background: linear-gradient(187deg, rgba(212,220,255,1) 0%, rgba(196,207,255,1) 100%); 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: black;
   font-family: "Crimson Text", serif !important;
 }
 
 .App {
   padding: 10px;
-}
-
-.navBar {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  justify-content: center;
 }
 
 .navOption {
@@ -61,6 +56,10 @@ html, body, #root {
 .articleListInner {
   display: flex;
   flex-direction: column;
+}
+
+pre {
+  text-wrap: wrap;
 }
 
 .articleList {

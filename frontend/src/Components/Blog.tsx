@@ -80,7 +80,7 @@ export default function Blog() {
 
     return (
         <articleContext.Provider value={article}>
-            <ParticleContainer>
+            {/* <ParticleContainer> */}
                 <div className="App">
                     <Navbar onChange={(newPath: string) => {
                         setPath(newPath);
@@ -97,7 +97,7 @@ export default function Blog() {
                     <Footer />
                     
                 </div>
-            </ParticleContainer>
+            {/* </ParticleContainer> */}
         </articleContext.Provider>
     );
 }

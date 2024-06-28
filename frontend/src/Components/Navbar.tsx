@@ -52,12 +52,16 @@ export default function Navbar(props: Props) {
     }
 
     return <Stack direction="column">
-        <Stack direction="row" justifyContent={"center"}><Logo navigateHome={() => {
+        <Stack sx={{maxWidth: '500px', width: '500px', margin: 'auto'}} direction="row" justifyContent={"left"}><Logo navigateHome={() => {
             props.onChange("home");
         }} /></Stack>
-        <Stack direction="row" divider={<Divider sx={{height: '20px', position: 'relative', top: '15px'}} orientation="vertical" flexItem />} className="navBar">
+        <div style={{maxWidth: '500px', margin: 'auto', marginTop: '10px'}} className="paper">
+            <div style={{paddingLeft: '10px', paddingRight: '10px'}} className="paperInner">
+                <Stack direction="row" gap={"10px"} divider={<Divider sx={{ height: '20px'}} orientation="vertical" flexItem />} className="navBar">
 
-            {options}
-        </Stack>
+                    {options}
+                </Stack>
+            </div>
+        </div>
     </Stack>
 }
