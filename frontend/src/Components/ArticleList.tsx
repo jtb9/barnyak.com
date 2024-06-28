@@ -332,7 +332,7 @@ export default function ArticleList(props: Props) {
     let articles = [];
 
     const min = 5 * page - 5;
-    const max = min + 10;
+    const max = min + 5;
 
     for (let i = 0; i < categoryArticles.length; i++) {
       if (i >= min && i < max) {
