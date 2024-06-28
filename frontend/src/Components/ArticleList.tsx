@@ -4,6 +4,7 @@ import Image from './Image';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { useState } from "react";
+import { scrollToTop } from "Utils/Behavior";
 
 interface Props {
   category: string;
@@ -351,6 +352,7 @@ export default function ArticleList(props: Props) {
           page={page}
           onChange={(_, newPage) => {
             setPage(newPage);
+            scrollToTop();
           }}
           count={Math.round(categoryArticles.length / 5)}
           renderItem={(item) => (
