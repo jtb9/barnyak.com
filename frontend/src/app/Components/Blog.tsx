@@ -6,6 +6,7 @@ import ArticleList, { ARTICLE_DATA } from "./ArticleList";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import { scrollToTop } from "Utils/Behavior";
+import Stonez from "./Stonez";
 
 export const articleContext = createContext<any>(undefined);
 
@@ -25,6 +26,7 @@ export default function Blog() {
     const [path, setPath] = useState("home");
     const [article, setArticle] = useState<any>(undefined);
     const [hasChanged, setHasChanged] = useState(false);
+    const [specialFeature, setSpecialFeature] = useState<any>(undefined);
 
     useEffect(() => {
         const currentUrl = window.location.pathname;
@@ -34,7 +36,12 @@ export default function Blog() {
             const path = urlSegments[1]
 
             if (path.length > 0) {
-                setPath(urlSegments[1]);
+                if (path.includes("stonez")) {
+                    setSpecialFeature(urlSegments);
+                }
+                else {
+                    setPath(urlSegments[1]);
+                }
             }
             else {
                 setPath("home");
@@ -70,6 +77,14 @@ export default function Blog() {
         setHasChanged(true);
 
         scrollToTop();
+    }
+
+    const renderSpecialFeature = () => {
+        return <Stonez feature={specialFeature[2]} />
+    }
+
+    if (specialFeature !== undefined) {
+        return renderSpecialFeature();
     }
 
     return (

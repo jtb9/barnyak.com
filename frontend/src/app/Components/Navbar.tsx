@@ -53,7 +53,7 @@ export default function Navbar(props: Props) {
     }
 
     return <Stack direction="column">
-        <Stack sx={{ maxWidth: '500px', width: '500px', margin: 'auto' }} direction="row" justifyContent={"left"}>
+        <Stack sx={{ maxWidth: '500px', width: '500px', margin: 'auto', marginTop: '10px' }} direction="row" justifyContent={"left"}>
             <Logo navigateHome={() => {
                 props.onChange("home");
             }} />

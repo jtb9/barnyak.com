@@ -151,3 +151,12 @@ pre {
 .footer a {
   color: white !important;
 }
+
+#stonez .logo {
+  height: 200px;
+  width: 200px;
+}
+
+#stonez {
+  padding: 10px;
+}
