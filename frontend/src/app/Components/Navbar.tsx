@@ -67,25 +67,11 @@ export default function Navbar(props: Props) {
                 </Stack>
             </div>
         </div>
-        <Xarrow divContainerStyle={{zIndex: '10'}} start="navbarX" end="navbarL" color="#EF476F"
+        <Xarrow divContainerStyle={{zIndex: '10', float: 'left'}} start="navbarX" end="navbarL" color="#EF476F"
         strokeWidth={4}
         headSize={5}
         path="smooth"
         dashness={{ strokeLen: 10, nonStrokeLen: 15, animation: 2 }}
         curveness={0.5} endAnchor="top" startAnchor="right" />
-        {/* <Xarrow divContainerStyle={{zIndex: '10'}} start="navbarL" end="aritlceListY" color="#00ffcc"
-        strokeWidth={4}
-        headSize={10}
-        path="smooth"
-        dashness={{ strokeLen: 10, nonStrokeLen: 15, animation: 2 }}
-        curveness={0.5} startAnchor="left"
-        endAnchor="top" />
-                <Xarrow divContainerStyle={{zIndex: '10'}} start="navbarL" end="aritlceListX" color="#00ffcc"
-        strokeWidth={4}
-        headSize={10}
-        path="smooth"
-        dashness={{ strokeLen: 10, nonStrokeLen: 15, animation: 2 }}
-        curveness={0.5} startAnchor="right"
-        endAnchor="top" /> */}
     </Stack>
 }

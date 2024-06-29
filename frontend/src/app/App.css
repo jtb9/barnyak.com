@@ -10,6 +10,10 @@ html, body, #root {
   font-family: "Crimson Text", serif !important;
 }
 
+.App {
+  overflow-x: hidden;
+}
+
 .navOption:hover {
   color: #EF476F;
   text-decoration-color: #b33653;
