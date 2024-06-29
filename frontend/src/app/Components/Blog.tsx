@@ -7,6 +7,8 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 import { scrollToTop } from "Utils/Behavior";
 import Stonez from "./Stonez";
+import { useAsciiText, broadway } from 'react-ascii-text';
+import { Stack } from "@mui/material";
 
 export const articleContext = createContext<any>(undefined);
 
@@ -27,6 +29,18 @@ export default function Blog() {
     const [article, setArticle] = useState<any>(undefined);
     const [hasChanged, setHasChanged] = useState(false);
     const [specialFeature, setSpecialFeature] = useState<any>(undefined);
+
+    const asciiTextRef = useAsciiText({
+        animationCharacters: "▒░█",
+        animationCharacterSpacing: 1,
+        animationDelay: 500,
+        animationDirection: "down",
+        animationInterval: 100,
+        animationLoop: true,
+        animationSpeed: 40,
+        font: broadway,
+        text: ["BARNYAK"],
+      });
 
     useEffect(() => {
         const currentUrl = window.location.pathname;
@@ -104,7 +118,12 @@ export default function Blog() {
                         onChange();
                     }} category={path} />}
                     <Footer />
-                    
+                    <Stack sx={{marginBottom: '10px'}} direction="row" justifyContent="center">
+                        <pre 
+                        className="asciiArt"
+                        //@ts-ignore
+                        ref={asciiTextRef}></pre>
+                    </Stack>
                 </div>
             {/* </ParticleContainer> */}
         </articleContext.Provider>

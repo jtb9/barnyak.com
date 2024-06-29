@@ -10,6 +10,11 @@ html, body, #root {
   font-family: "Crimson Text", serif !important;
 }
 
+.asciiArt {
+  color: white;
+  margin: auto;
+}
+
 .App {
   overflow-x: hidden;
 }
