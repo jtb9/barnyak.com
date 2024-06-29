@@ -85,6 +85,18 @@ export const ARTICLE_DATA = [
     "content": "## Game: [Stonez](https://barnyak.com)\r\n\r\n### Hello Stonez Adventurers!\r\n\r\nWe’re excited to announce a brand-new feature coming soon to Stonez: Tower Defense Mode! Prepare to defend your base against endless waves of enemies using an array of powerful turrets. Here’s what you need to know about this thrilling addition to the game:\r\nTower Defense Mode\r\n\r\n![Stonez4](https://cdn.barnyak.com/auto/stonez4.png)\r\n\r\nIn Tower Defense Mode, you’ll face endless waves of enemies trying to breach your defenses. Strategically place turrets to stop them and protect your base. How long can you withstand the onslaught?\r\n\r\n### Endless Waves\r\n\r\n    Constant Challenge: Test your strategic skills against an unending horde of enemies.\r\n    Progressive Difficulty: As you advance, enemies become tougher and more numerous. Can you keep up?\r\n\r\n![Stonez3](https://cdn.barnyak.com/auto/stonez3.gif)\r\n\r\n### Turrets\r\n\r\nEquip your base with a variety of turrets, each with unique abilities:\r\n\r\n    Gattling Gun: Rapid-fire bullets to mow down enemies quickly.\r\n    Ballista Turret: Launches powerful bolts that pierce through multiple foes.\r\n    Magic Turret: Casts mystical spells to damage and slow down enemies.\r\n    Electric Turret: Emits electric shocks, stunning and damaging groups of enemies.\r\n\r\n### Upgrades from Main Game\r\n\r\nCarry over your upgrades from the main game into Tower Defense Mode:\r\n\r\n    Strength: Enhances turret damage.\r\n    Attack: Boosts firing rate and effectiveness.\r\n    Defense: Increases the durability and resilience of your turrets.\r\n\r\n### Strategy and Survival\r\n\r\n    Resource Management: Use resources gathered in the main game to build and upgrade your turrets.\r\n    Strategic Placement: Position your turrets wisely to maximize their effectiveness against different types of enemies.\r\n    Endless Fun: See how long you can survive and aim for the highest score on the leaderboards.\r\n\r\n### What's Next?\r\n\r\nAs we finalize this exciting feature, we’re looking forward to your feedback to make it even better. Stay tuned for more details on the release date and special events tied to the Tower Defense Mode.\r\n\r\nThank you for being part of the Stonez community! Your support and feedback are crucial as we continue to expand and improve the game. Get ready to defend your base and show your strategic prowess in the new Tower Defense Mode!\r\n\r\nUntil next time, happy adventuring!\r\nThe Stonez Development Team\r\n"
   },
   {
+    "title": "Manor Lords",
+    "thumbnail": "https://cdn.barnyak.com/auto/ManorLords-WinGDK-Shipping_B8bD6rVsfj.jpg",
+    "date": "2024-06-28T04:00:00.000Z",
+    "slug": "6_28_24_manorlords",
+    "categories": [
+      "games"
+    ],
+    "author": "Justin Barnyak",
+    "summary": "## Game: [Manor Lords](https://www.xbox.com/en-US/games/store/manor-lords-game-preview/9p5f966564fs)\r",
+    "content": "## Game: [Manor Lords](https://www.xbox.com/en-US/games/store/manor-lords-game-preview/9p5f966564fs)\r\n\r\n![ManorLords1](https://cdn.barnyak.com/auto/ManorLords-WinGDK-Shipping_B8bD6rVsfj.jpg)\r\n\r\n### Gameplay and Mechanics:\r\nManor Lords offers an intriguing blend of city-building and strategy that immediately draws you in with its immersive mechanics and stunning aesthetics. The gameplay revolves around managing your settlement, optimizing resources, and expanding your territory. The most challenging aspect is optimizing your food setup to ensure you have enough influence to secure additional plots of land before the AI outpaces you. This creates a strategic layer that is both engaging and rewarding.\r\n\r\n### Content Depth:\r\nWhile the initial pass of the game is enjoyable, it becomes apparent that the content lacks depth. The game introduces solid foundational mechanics, but they don't always translate into more complex downstream systems. For instance, while building up your village and gaining villagers is satisfying, it doesn't lead to more intricate or varied gameplay options as much as one might hope.\r\n\r\n![ManorLords2](https://cdn.barnyak.com/auto/ManorLords-WinGDK-Shipping_C70zVAY3Se.jpg)\r\n\r\n### Aesthetics and Immersion:\r\nOne of the standout features of Manor Lords is its aesthetics. The game is visually stunning, with a detailed and beautifully rendered environment that adds a lot to the immersive experience. The sound design and atmospheric elements further enhance this immersion, making you feel genuinely connected to your growing settlement.\r\n\r\n### Early Release Content:\r\nThe game does come with some limitations, primarily due to its early release status. Some content is still locked behind early release flags, which can be a bit frustrating for players eager to explore all the game's potential. The anticipation of future updates does add a sense of excitement, though.\r\n\r\n![ManorLords3](https://cdn.barnyak.com/auto/ManorLords-WinGDK-Shipping_k4Ie264yJs.jpg)\r\n\r\n### Suggestions for Improvement:\r\nTo deepen the gameplay experience, it would be beneficial to have more food options, such as fishing, to diversify strategies and enhance the resource management aspect. Additionally, expanding the downstream mechanics that result from increasing your population would add much-needed depth and complexity to the gameplay.\r\n\r\n### Final Thoughts:\r\nManor Lords is a promising title with excellent aesthetics and immersive gameplay. Despite its current content limitations, it offers a solid and enjoyable experience that can only improve with future updates and added depth. If you enjoy strategic city-building games, Manor Lords is definitely worth a try, especially if you appreciate beautiful visuals and a well-crafted atmosphere.\r\n"
+  },
+  {
     "title": "World of Warcraft Shadowlands Release Date Announced",
     "thumbnail": "https://andromeda-code-blog-cdn.s3.us-east-2.amazonaws.com/shadowlands/WoW_Summit_PressKit_NightFaeCovenantHall_3840x2160.jpg",
     "date": "2020-08-29T04:00:00.000Z",
@@ -119,6 +131,18 @@ export const ARTICLE_DATA = [
     "author": "Justin Barnyak",
     "summary": "## Topic: [International Space Station](https://www.nasa.gov/mission_pages/station/main/index.html)\r",
     "content": "## Topic: [International Space Station](https://www.nasa.gov/mission_pages/station/main/index.html)\r\n\r\nThe International Space Station at NASA Headquarters has a new director! **Robyn Gatens**.  She first started working for NASA in 1985 at the Marshall Space Flight Center and has since managed primarily environmental control and life support systems for human spaceflight missions.\r\n\r\n![Robyn Gatens](https://www.nasa.gov/sites/default/files/thumbnails/image/robyn-gatens-head-shot-new.jpg)\r\n*Robyn Gatens -- Credit: NASA*\r\n\r\nAlso the recipient of NASA’s Outstanding Leadership and Exceptional Achievement Medals her resume is a perfect fit for the role and I'm very excited to see where she takes the ISS in the coming years.\r\n\r\nWe're only 62 days out from the 20th anniversary of manned operation at the International Space Station.  So this is a perfect time to pass the mantle on to a champion of manned space flight and propel the ISS into another era.\r\n"
+  },
+  {
+    "title": "Cyberpunk 2077 - GeForce RTX Trailer",
+    "thumbnail": "https://www.cyberpunk.net/build/images/home3/screen-image-mercenary-49f166ed.jpg",
+    "date": "2020-09-01T04:00:00.000Z",
+    "slug": "9_1_2020_cyberpunkrtx",
+    "categories": [
+      "games"
+    ],
+    "author": "Justin Barnyak",
+    "summary": "## Game: [Cyberpunk 2077](https://www.cyberpunk.net/us/en/)\r",
+    "content": "## Game: [Cyberpunk 2077](https://www.cyberpunk.net/us/en/)\r\n\r\n{% youtube 4auy8hz59Hk %}\r\n"
   },
   {
     "title": "Planet 9 May be Smoking Gun For 2 Stars in Our Solary System",
@@ -239,6 +263,18 @@ export const ARTICLE_DATA = [
     "author": "Justin Barnyak",
     "summary": "## Topic: [Ghostrunner](https://ghostrunnergame.com/)\r",
     "content": "## Topic: [Ghostrunner](https://ghostrunnergame.com/)\r\n![Ghostrunner](https://cdn.barnyak.com/auto/%5BGR%5D_hr_screenshot_08_1920x1080px.png)\r\n\r\nI've talked about [Ghostrunner before](https://barnyak.com/2020/ghostrunner/). Please go check it out for more info.\r\n\r\nToday I bring you news about an upcoming Demo for Ghostrunner, however.  \r\n\r\n\r\n#### Releasing October 27th (But a demo going live on September 29th on steam). \r\n\r\nThere's also a new trailer and some pre-order info.  The most massive pre-order discounts are landing over at steam with 20% and Xbox one trailing at 10%.  \r\n\r\nWe've only got about a month to wait at this point!  Hopefully, the demo will help scratch the cyberpunk itch to get over that last hump.  It's finally happening, people!\r\n\r\n{% youtube -nzPyBMoJUI %}\r\n"
+  },
+  {
+    "title": "New OPAL Jupiter Images",
+    "thumbnail": "https://www.nasa.gov/sites/default/files/thumbnails/image/stsci-h-p2042a-f-1663x1663.png",
+    "date": "2020-09-18T04:00:00.000Z",
+    "slug": "opal",
+    "categories": [
+      "space"
+    ],
+    "author": "Justin Barnyak",
+    "summary": "## Topic: [Jupiter](https://solarsystem.nasa.gov/planets/jupiter/overview/)\r",
+    "content": "## Topic: [Jupiter](https://solarsystem.nasa.gov/planets/jupiter/overview/)\r\n![Jupiter](https://www.nasa.gov/sites/default/files/thumbnails/image/stsci-h-p2042a-f-1663x1663.png)\r\n*Credit: NASA*\r\n\r\nYou're looking at them!  NASA released new Hubble shots of Jupiter on August 25th.  These are crystal clear and give us a really cool insight into Jupiter's upcoming weather forecast.  Unfortunately, Jupiter's red spot is still shrinking.  It's gotten to about 9,800 miles across.\r\n\r\nIn the realm of good news, however, Red Spot Jr's has halted it's fade back to white and appears to be darkening again.  We may yet get our twin red storms of fantasy!\r\n\r\nI'm not sure if this at the start or tail end of our yearly OPAL missions.  But we will hopefully still get some more shots before we have to wait yet another year.\r\n\r\n\r\n#### The ongoing shrinkage of Jupiter's red spot is still a \"mystery\".\r\n\r\n![Jupiter in ultraviolet](https://www.nasa.gov/sites/default/files/thumbnails/image/stsci-h-p2042b-f-sq.png)\r\n*Credit: NASA*\r\n"
   },
   {
     "title": "The Future of Wireless Power",
