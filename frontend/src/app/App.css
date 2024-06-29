@@ -4,6 +4,8 @@ html, body, #root {
   background: linear-gradient(187deg, #0F0326 0%, #20193a 100%); 
   background-repeat: no-repeat;
   background-attachment: fixed;
+  display: block;
+  margin: 0;
   color: black;
   font-family: "Crimson Text", serif !important;
 }
@@ -24,10 +26,6 @@ html, body, #root {
 .MuiButton-outlined {
   border-color: #EF476F !important;
   color: #EF476F !important;
-}
-
-.App {
-  padding: 10px;
 }
 
 .navOption {
@@ -58,6 +56,10 @@ html, body, #root {
   border: 1px solid rgba(0, 0, 0, 0.548);
   border-radius: 8px;
   padding: 5px;
+}
+
+.singleArticle .paperInner {
+  padding: 13px;
 }
 
 .paperInner {
@@ -113,6 +115,13 @@ pre {
   gap: 10px;
 }
 
+@media (max-width: 400px) {
+  .articleMetadata {
+    flex-direction: column;
+    gap: 0px;
+  }
+}
+
 .articleMeta {
   font-size: 0.8rem;
 }
@@ -129,8 +138,12 @@ pre {
 }
 
 .singleArticle img {
-  max-width: 795px;
-  width: calc(100% + 28px);
+  max-width: 800px;
+  width: calc(100% + 28px) !important;
   position: relative;
   left: -14px;
+}
+
+.footer a {
+  color: white !important;
 }

@@ -5,7 +5,6 @@ import Article from "./Article";
 import ArticleList, { ARTICLE_DATA } from "./ArticleList";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
-import ParticleContainer from "./ParticleContainer";
 import { scrollToTop } from "Utils/Behavior";
 
 export const articleContext = createContext<any>(undefined);
