@@ -140,7 +140,7 @@ export default function Stonez(props: Props) {
             <Stack justifyContent={"center"} direction={"row"}>
 
                 <div className="paper">
-                    <div className="paperInner" style={{ width: '600px' }}>
+                    <div className="paperInner" style={{ maxWidth: '600px' }}>
                         {renderFeature()}
                     </div>
                 </div>

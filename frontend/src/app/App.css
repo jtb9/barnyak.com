@@ -19,6 +19,10 @@ html, body, #root {
   overflow-x: hidden;
 }
 
+#stonez {
+  overflow-x: hidden;
+}
+
 .navOption:hover {
   color: #EF476F;
   text-decoration-color: #b33653;
