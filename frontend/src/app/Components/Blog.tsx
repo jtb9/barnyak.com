@@ -11,6 +11,7 @@ import { useAsciiText, broadway } from 'react-ascii-text';
 import { Stack } from "@mui/material";
 import CircleBackdrop from "./CircleBackdrop";
 import { LocomotiveScrollProvider, useLocomotiveScroll } from 'react-locomotive-scroll'
+import CloudHeader from "./CloudHeader";
 
 export const articleContext = createContext<any>(undefined);
 
@@ -115,23 +116,8 @@ export default function Blog() {
     return (
         <articleContext.Provider value={article}>
             {/* <ParticleContainer> */}
-            <LocomotiveScrollProvider
-                options={
-                    {
-                        smooth: true,
-                        // ... all available Locomotive Scroll instance options 
-                    }
-                }
-                watch={
-                    [
-                        //..all the dependencies you want to watch to update the scroll.
-                        //  Basicaly, you would want to watch page/location changes
-                        //  For exemple, on Next.js you would want to watch properties like `router.asPath` (you may want to add more criterias if the instance should be update on locations with query parameters)
-                    ]
-                }
-                containerRef={containerRef}
-            >
-                <div data-scroll-container className="App" ref={containerRef}>
+                <div className="App" ref={containerRef}>
+                    <CloudHeader />
                     <Navbar onChange={(newPath: string) => {
                         setPath(newPath);
                         setArticle(undefined);
@@ -146,7 +132,6 @@ export default function Blog() {
                     }} category={path} />}
                     <Footer />
                 </div>
-            </LocomotiveScrollProvider>
             {/* <CircleBackdrop /> */}
             {/* </ParticleContainer> */}
         </articleContext.Provider>
