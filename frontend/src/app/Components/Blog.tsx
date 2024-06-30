@@ -34,7 +34,6 @@ export default function Blog() {
     const [hasChanged, setHasChanged] = useState(false);
     const [specialFeature, setSpecialFeature] = useState<any>(undefined);
     const containerRef = useRef(null);
-    const { scroll } = useLocomotiveScroll();
 
     // const asciiTextRef = useAsciiText({
     //     animationCharacters: "▒░█",
@@ -98,7 +97,7 @@ export default function Blog() {
     const onChange = () => {
         setHasChanged(true);
 
-        scrollToTop(scroll);
+        scrollToTop();
     }
 
     const renderSpecialFeature = () => {

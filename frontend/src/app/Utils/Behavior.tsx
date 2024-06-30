@@ -1,12 +1,11 @@
-export function scrollToTop(hook: any) {
+export function scrollToTop() {
     try {
-        //hook.scrollTo("top");
         window.scrollTo({
             top: 0,
             behavior: 'smooth' // Optional: This makes the scroll smooth
         });
     }
     catch (e) {
-
+        console.error(e);
     }
 }

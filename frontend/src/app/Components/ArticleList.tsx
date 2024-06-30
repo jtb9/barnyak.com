@@ -305,7 +305,6 @@ export const ARTICLE_DATA = [
 
 export default function ArticleList(props: Props) {
   const [page, setPage] = useState(1);
-  const { scroll } = useLocomotiveScroll()
   const category = props.category;
 
   const renderArticle = (blob: any) => {
@@ -369,7 +368,7 @@ export default function ArticleList(props: Props) {
           page={page}
           onChange={(_, newPage) => {
             setPage(newPage);
-            scrollToTop(scroll);
+            scrollToTop();
           }}
           count={Math.round(categoryArticles.length / 5)}
           renderItem={(item) => (
