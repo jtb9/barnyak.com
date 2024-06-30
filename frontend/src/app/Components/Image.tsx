@@ -1,4 +1,4 @@
-import { LinearProgress } from "@mui/material";
+import { LinearProgress, Tooltip } from "@mui/material";
 import { useState } from "react";
 import { useInView } from "react-intersection-observer";
 
@@ -7,6 +7,8 @@ interface Props {
     alt: string;
     className?: string;
     onClick?: any;
+    inline?: any;
+    children?: any;
 }
 
 export default function Image(props: Props) {
@@ -24,7 +26,7 @@ export default function Image(props: Props) {
 
     const [loaded, setLoaded] = useState(false);
 
-    return <div style={{width: '100%'}} ref={ref}>
+    return <div style={{ width: '100%' }} ref={ref}>
         {!loaded && <LinearProgress />}
         {inView && (
             <img style={{
@@ -34,6 +36,7 @@ export default function Image(props: Props) {
             }} />
         )}
     </div>
+
 
     // return <img style={{
     //     cursor: 'pointer'
