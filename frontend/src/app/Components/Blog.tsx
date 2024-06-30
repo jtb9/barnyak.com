@@ -34,18 +34,6 @@ export default function Blog() {
     const [hasChanged, setHasChanged] = useState(false);
     const [specialFeature, setSpecialFeature] = useState<any>(undefined);
 
-    // const asciiTextRef = useAsciiText({
-    //     animationCharacters: "▒░█",
-    //     animationCharacterSpacing: 1,
-    //     animationDelay: 500,
-    //     animationDirection: "down",
-    //     animationInterval: 100,
-    //     animationLoop: true,
-    //     animationSpeed: 40,
-    //     font: broadway,
-    //     text: ["BARNYAK"],
-    //   });
-
     useEffect(() => {
         const currentUrl = window.location.pathname;
         const urlSegments = currentUrl.split('/');
@@ -56,6 +44,9 @@ export default function Blog() {
             if (path.length > 0) {
                 if (path.includes("stonez")) {
                     setSpecialFeature(urlSegments);
+                }
+                else if (path.includes("privacy")) {
+                    setSpecialFeature(["", "", "privacy"]);
                 }
                 else {
                     setPath(urlSegments[1]);
