@@ -51,8 +51,8 @@ export default function Navbar(props: Props) {
             }
         }}>
             <Stack direction="row">
-            {icon}
-            <div style={{paddingLeft: '2px', position: 'relative', top: '2px'}}>{label}</div>
+                {icon}
+                <div style={{ paddingLeft: '2px', position: 'relative', top: '2px' }}>{label}</div>
             </Stack>
         </div>
     }
@@ -74,7 +74,12 @@ export default function Navbar(props: Props) {
         </Stack>
         <div style={{ maxWidth: '500px', margin: 'auto', marginTop: '10px' }} className="paper">
             <div style={{ paddingLeft: '10px', paddingRight: '10px' }} className="paperInner">
-                <Stack id="navbarL" sx={{ height: '25px' }} direction="row" gap={"10px"} divider={<Divider sx={{ height: '25px' }} orientation="vertical" flexItem />} className="navBar">
+                <Stack id="navbarL" sx={{
+                    flexDirection: {
+                        sm: 'column', // Mobile view: stack items vertically
+                         md: 'row',    // Tablet and above: stack items horizontally
+                    },
+                }} gap={"10px"} direction="column"  className="navBar">
 
                     {options}
                 </Stack>
