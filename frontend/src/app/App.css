@@ -3,7 +3,7 @@ html, body, #root {
   height: 100%;
   background: linear-gradient(187deg, #0F0326 0%, #20193a 100%); 
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-color: #20193a;
   display: block;
   margin: 0;
   color: black;
@@ -17,6 +17,7 @@ html, body, #root {
 
 .App {
   overflow-x: hidden;
+  z-index: 10 !important;
 }
 
 #stonez {
@@ -66,9 +67,10 @@ html, body, #root {
 }
 
 .paper {
-  border: 1px solid rgba(0, 0, 0, 0.548);
-  border-radius: 8px;
-  padding: 5px;
+  border: 1px solid #b3b3b3;
+  outline: 1px solid #464646;
+  border-radius: 4px;
+  padding: 1px;
 }
 
 .singleArticle .paperInner {
@@ -77,8 +79,8 @@ html, body, #root {
 
 .paperInner {
   padding: 1px;
-  border: 1px solid rgba(0, 0, 0, 0.248);
-  border-radius: 8px;
+  border: 1px solid #c06177;
+  border-radius: 4px;
   
   background-color: #F5F0F6;
 }
@@ -151,7 +153,7 @@ pre {
 }
 
 .singleArticle img {
-  max-width: 800px;
+  max-width: 801px;
   width: calc(100% + 28px) !important;
   position: relative;
   left: -14px;

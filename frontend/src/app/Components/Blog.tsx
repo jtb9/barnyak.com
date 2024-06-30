@@ -9,6 +9,7 @@ import { scrollToTop } from "Utils/Behavior";
 import Stonez from "./Stonez";
 import { useAsciiText, broadway } from 'react-ascii-text';
 import { Stack } from "@mui/material";
+import CircleBackdrop from "./CircleBackdrop";
 
 export const articleContext = createContext<any>(undefined);
 
@@ -118,13 +119,9 @@ export default function Blog() {
                         onChange();
                     }} category={path} />}
                     <Footer />
-                    <Stack sx={{marginBottom: '10px'}} direction="row" justifyContent="center">
-                        <pre 
-                        className="asciiArt"
-                        //@ts-ignore
-                        ref={asciiTextRef}></pre>
-                    </Stack>
+                    
                 </div>
+                {/* <CircleBackdrop /> */}
             {/* </ParticleContainer> */}
         </articleContext.Provider>
     );
