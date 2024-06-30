@@ -33,7 +33,6 @@ export default function Blog() {
     const [article, setArticle] = useState<any>(undefined);
     const [hasChanged, setHasChanged] = useState(false);
     const [specialFeature, setSpecialFeature] = useState<any>(undefined);
-    const containerRef = useRef(null);
 
     // const asciiTextRef = useAsciiText({
     //     animationCharacters: "▒░█",
@@ -115,7 +114,7 @@ export default function Blog() {
     return (
         <articleContext.Provider value={article}>
             {/* <ParticleContainer> */}
-                <div className="App" ref={containerRef}>
+                <div className="App">
                     <CloudHeader />
                     <Navbar onChange={(newPath: string) => {
                         setPath(newPath);
