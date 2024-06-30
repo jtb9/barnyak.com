@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, createContext } from "react";
+import { useState, useEffect, createContext, useRef } from "react";
 import Article from "./Article";
 import ArticleList, { ARTICLE_DATA } from "./ArticleList";
 import Footer from "./Footer";
@@ -10,6 +10,7 @@ import Stonez from "./Stonez";
 import { useAsciiText, broadway } from 'react-ascii-text';
 import { Stack } from "@mui/material";
 import CircleBackdrop from "./CircleBackdrop";
+import { LocomotiveScrollProvider, useLocomotiveScroll } from 'react-locomotive-scroll'
 
 export const articleContext = createContext<any>(undefined);
 
@@ -27,21 +28,24 @@ function getArticleBySlug(slug: string) {
 
 export default function Blog() {
     const [path, setPath] = useState("home");
+    const [loaded, setLoaded] = useState(false);
     const [article, setArticle] = useState<any>(undefined);
     const [hasChanged, setHasChanged] = useState(false);
     const [specialFeature, setSpecialFeature] = useState<any>(undefined);
+    const containerRef = useRef(null);
+    const { scroll } = useLocomotiveScroll();
 
-    const asciiTextRef = useAsciiText({
-        animationCharacters: "▒░█",
-        animationCharacterSpacing: 1,
-        animationDelay: 500,
-        animationDirection: "down",
-        animationInterval: 100,
-        animationLoop: true,
-        animationSpeed: 40,
-        font: broadway,
-        text: ["BARNYAK"],
-      });
+    // const asciiTextRef = useAsciiText({
+    //     animationCharacters: "▒░█",
+    //     animationCharacterSpacing: 1,
+    //     animationDelay: 500,
+    //     animationDirection: "down",
+    //     animationInterval: 100,
+    //     animationLoop: true,
+    //     animationSpeed: 40,
+    //     font: broadway,
+    //     text: ["BARNYAK"],
+    //   });
 
     useEffect(() => {
         const currentUrl = window.location.pathname;
@@ -73,6 +77,8 @@ export default function Blog() {
                 setArticle(getArticleBySlug(urlSegments[2]));
             }
         }
+
+        setLoaded(true);
     }, []); // Empty dependency array ensures this runs only once on mount
 
     useEffect(() => {
@@ -91,7 +97,7 @@ export default function Blog() {
     const onChange = () => {
         setHasChanged(true);
 
-        scrollToTop();
+        scrollToTop(scroll);
     }
 
     const renderSpecialFeature = () => {
@@ -102,10 +108,30 @@ export default function Blog() {
         return renderSpecialFeature();
     }
 
+    if (loaded === false) {
+        return <div className="App"></div>
+    }
+
     return (
         <articleContext.Provider value={article}>
             {/* <ParticleContainer> */}
-                <div className="App">
+            <LocomotiveScrollProvider
+                options={
+                    {
+                        smooth: true,
+                        // ... all available Locomotive Scroll instance options 
+                    }
+                }
+                watch={
+                    [
+                        //..all the dependencies you want to watch to update the scroll.
+                        //  Basicaly, you would want to watch page/location changes
+                        //  For exemple, on Next.js you would want to watch properties like `router.asPath` (you may want to add more criterias if the instance should be update on locations with query parameters)
+                    ]
+                }
+                containerRef={containerRef}
+            >
+                <div data-scroll-container className="App" ref={containerRef}>
                     <Navbar onChange={(newPath: string) => {
                         setPath(newPath);
                         setArticle(undefined);
@@ -119,9 +145,9 @@ export default function Blog() {
                         onChange();
                     }} category={path} />}
                     <Footer />
-                    
                 </div>
-                {/* <CircleBackdrop /> */}
+            </LocomotiveScrollProvider>
+            {/* <CircleBackdrop /> */}
             {/* </ParticleContainer> */}
         </articleContext.Provider>
     );

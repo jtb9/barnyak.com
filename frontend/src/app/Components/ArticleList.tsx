@@ -5,6 +5,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { useState } from "react";
 import { scrollToTop } from "Utils/Behavior";
+import { useLocomotiveScroll } from "react-locomotive-scroll";
 
 interface Props {
   category: string;
@@ -304,7 +305,7 @@ export const ARTICLE_DATA = [
 
 export default function ArticleList(props: Props) {
   const [page, setPage] = useState(1);
-
+  const { scroll } = useLocomotiveScroll()
   const category = props.category;
 
   const renderArticle = (blob: any) => {
@@ -368,7 +369,7 @@ export default function ArticleList(props: Props) {
           page={page}
           onChange={(_, newPage) => {
             setPage(newPage);
-            scrollToTop();
+            scrollToTop(scroll);
           }}
           count={Math.round(categoryArticles.length / 5)}
           renderItem={(item) => (
