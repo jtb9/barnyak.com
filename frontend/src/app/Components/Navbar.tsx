@@ -1,6 +1,11 @@
 import { Divider, Stack } from "@mui/material";
 import Logo from "./Logo";
 import Xarrow from "react-xarrows";
+import GitHubIcon from '@mui/icons-material/GitHub';
+import ArticleIcon from '@mui/icons-material/Article';
+import HomeIcon from '@mui/icons-material/Home';
+import SatelliteAltIcon from '@mui/icons-material/SatelliteAlt';
+import AttractionsIcon from '@mui/icons-material/Attractions';
 
 interface Props {
     onChange: (path: string) => void;
@@ -10,27 +15,32 @@ export default function Navbar(props: Props) {
     const navigationOptions = [
         {
             label: "Home",
-            path: "home"
+            path: "home",
+            icon: <HomeIcon />
         },
         {
             label: "Space",
-            path: "space"
+            path: "space",
+            icon: <SatelliteAltIcon />
         },
         {
-            label: "Video Games",
-            path: "games"
+            label: "Games",
+            path: "games",
+            icon: <AttractionsIcon />
         },
         {
             label: "GitHub",
-            path: "https://github.com/jtb9"
+            path: "https://github.com/jtb9",
+            icon: <GitHubIcon />
         },
         {
-            label: "Work Samples",
-            path: "https://cdn.barnyak.com/auto/JustinBarnyak-2024-worksamples.pdf"
+            label: "Portfolio",
+            path: "https://cdn.barnyak.com/auto/JustinBarnyak-2024-worksamples.pdf",
+            icon: <ArticleIcon />
         }
     ]
 
-    const renderNavOption = (path: string, label: string) => {
+    const renderNavOption = (path: string, label: string, icon?: any) => {
         return <div key={`nav-${label}`} className="navOption" onClick={() => {
             if (path.includes("https://")) {
                 //@ts-ignore
@@ -40,7 +50,10 @@ export default function Navbar(props: Props) {
                 props.onChange(path);
             }
         }}>
-            {label}
+            <Stack direction="row">
+            {icon}
+            <div style={{paddingLeft: '2px', position: 'relative', top: '2px'}}>{label}</div>
+            </Stack>
         </div>
     }
 
@@ -48,7 +61,7 @@ export default function Navbar(props: Props) {
 
     for (let i = 0; i < navigationOptions.length; i++) {
         options.push(
-            renderNavOption(navigationOptions[i].path, navigationOptions[i].label)
+            renderNavOption(navigationOptions[i].path, navigationOptions[i].label, navigationOptions[i].icon)
         );
     }
 
