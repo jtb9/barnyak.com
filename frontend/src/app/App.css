@@ -23,6 +23,7 @@ body {
   background-repeat: no-repeat;
   background-color: #20193a;
   display: block;
+  overflow-x: hidden;
   color: black;
   height: 100%;
   font-family: "Crimson Text", serif !important;
