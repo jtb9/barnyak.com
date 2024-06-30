@@ -76,8 +76,8 @@ export default function Navbar(props: Props) {
             <div style={{ paddingLeft: '10px', paddingRight: '10px' }} className="paperInner">
                 <Stack id="navbarL" sx={{
                     flexDirection: {
-                        sm: 'column', // Mobile view: stack items vertically
-                         md: 'row',    // Tablet and above: stack items horizontally
+                        xs: 'column', // Mobile view: stack items vertically
+                        sm: 'row',    // Tablet and above: stack items horizontally
                     },
                 }} gap={"10px"} direction="column"  className="navBar">
 
