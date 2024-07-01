@@ -29,6 +29,10 @@ body {
   font-family: "Crimson Text", serif !important;
 }
 
+.fullScreenImage {
+  width: 100%
+}
+
 #stonez {
   overflow-x: hidden;
 }
@@ -49,6 +53,11 @@ body {
 .MuiButton-outlined {
   border-color: #EF476F !important;
   color: #EF476F !important;
+}
+
+.imageViewButton {
+  background-color: #8DB580 !important;
+  font-family: "Crimson Text", serif !important;
 }
 
 .MuiLinearProgress-bar2Indeterminate {
