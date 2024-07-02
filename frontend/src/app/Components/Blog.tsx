@@ -12,6 +12,7 @@ import { Stack } from "@mui/material";
 import CircleBackdrop from "./CircleBackdrop";
 import { LocomotiveScrollProvider, useLocomotiveScroll } from 'react-locomotive-scroll'
 import CloudHeader from "./CloudHeader";
+import { useAptabase } from "@aptabase/react";
 
 export const articleContext = createContext<any>(undefined);
 
@@ -28,11 +29,16 @@ function getArticleBySlug(slug: string) {
 }
 
 export default function Blog() {
+    const { trackEvent } = useAptabase();
     const [path, setPath] = useState("home");
     const [loaded, setLoaded] = useState(false);
     const [article, setArticle] = useState<any>(undefined);
     const [hasChanged, setHasChanged] = useState(false);
     const [specialFeature, setSpecialFeature] = useState<any>(undefined);
+
+    useEffect(() => {
+        trackEvent("loadBlog");
+    }, [])
 
     useEffect(() => {
         const currentUrl = window.location.pathname;
@@ -78,6 +84,8 @@ export default function Blog() {
             if (article) {
                 newUrl += `/${article.slug}`;
             }
+
+            trackEvent("navigate", { path: newUrl })
 
             // Update the browser URL
             window.history.pushState(null, '', newUrl);
