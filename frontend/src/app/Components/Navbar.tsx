@@ -6,7 +6,7 @@ import ArticleIcon from '@mui/icons-material/Article';
 import HomeIcon from '@mui/icons-material/Home';
 import SatelliteAltIcon from '@mui/icons-material/SatelliteAlt';
 import AttractionsIcon from '@mui/icons-material/Attractions';
-
+import LocalPrintshopIcon from '@mui/icons-material/LocalPrintshop';
 interface Props {
     onChange: (path: string) => void;
 }
@@ -37,6 +37,11 @@ export default function Navbar(props: Props) {
             label: "Portfolio",
             path: "https://cdn.barnyak.com/auto/JustinBarnyak-2024-worksamples.pdf",
             icon: <ArticleIcon />
+        },
+        {
+            label: "Prints",
+            path: 'https://paperzcrafts.etsy.com',
+            icon: <LocalPrintshopIcon />
         }
     ]
 

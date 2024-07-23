@@ -13,6 +13,7 @@ import CircleBackdrop from "./CircleBackdrop";
 import { LocomotiveScrollProvider, useLocomotiveScroll } from 'react-locomotive-scroll'
 import CloudHeader from "./CloudHeader";
 import { useAptabase } from "@aptabase/react";
+import Pokedex from "./Pokedex";
 
 export const articleContext = createContext<any>(undefined);
 
@@ -53,6 +54,9 @@ export default function Blog() {
                 }
                 else if (path.includes("privacy")) {
                     setSpecialFeature(["", "", "privacy"]);
+                }
+                else if (path.includes("pokedex")) {
+                    setSpecialFeature(["", "", "pokedex"]);
                 }
                 else {
                     setPath(urlSegments[1]);
@@ -99,6 +103,10 @@ export default function Blog() {
     }
 
     const renderSpecialFeature = () => {
+        if (specialFeature[2] === "pokedex") {
+            return <div className="App"><Pokedex /></div>
+        }
+
         return <Stonez feature={specialFeature[2]} />
     }
 

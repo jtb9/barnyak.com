@@ -29,6 +29,28 @@ body {
   font-family: "Crimson Text", serif !important;
 }
 
+.pokedex .MuiTypography-root {
+  font-family: "Crimson Text", serif !important;
+  color: white !important;
+}
+
+.pokedexDialog .MuiTypography-root {
+  font-family: "Crimson Text", serif !important;
+}
+
+.pokemonCard {
+  transition: all ease-out 1s;
+}
+
+.pokemonCard:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.pokedex .MuiPaper-root {
+  background: linear-gradient(180deg, #0F0326 0%, #20193a 100%); 
+}
+
 .fullScreenImage {
   width: 100%
 }

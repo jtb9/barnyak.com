@@ -5,3 +5,4 @@ blog/db.json
 blog/node_modules/
 blog/public/
 blog/.deploy*/
+pokedex/fetcher/node_modules
