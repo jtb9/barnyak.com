@@ -2,7 +2,8 @@
 
 import { useState, useEffect, createContext, useRef } from "react";
 import Article from "./Article";
-import ArticleList, { ARTICLE_DATA } from "./ArticleList";
+import ArticleList from "./ArticleList";
+import { ARTICLE_DATA } from "Utils/ArticleData";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import { scrollToTop } from "Utils/Behavior";
