@@ -2,16 +2,32 @@
 import { useEffect } from "react";
 import "./App.css";
 import Blog from "./Components/Blog";
+import { init } from "@socialgouv/matomo-next";
+
+const MATOMO_URL = 'https://analytics.barnyak.com';
+const MATOMO_SITE_ID = "3";
+const CLARITY_PROJECT_ID = 'qygop8twft';
 
 export default function Home() {
   useEffect(() => {
-    //@ts-ignore
-    var _mtm = window._mtm = window._mtm || [];
-    _mtm.push({'mtm.startTime': (new Date().getTime()), 'event': 'mtm.Start'});
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-    //@ts-ignore
-    g.async=true; g.src='https://analytics.barnyak.com'; s.parentNode.insertBefore(g,s);
-}, [])
+    try {
+      //@ts-ignore
+      if (window.has_loaded === true) return;
+      //@ts-ignore
+      window.has_loaded = true;
+      init({ url: MATOMO_URL, siteId: MATOMO_SITE_ID });
+    }
+    catch (e) {
+      console.log(e);
+    }
+
+    try {
+      //Clarity.init(CLARITY_PROJECT_ID);
+    }
+    catch (e) {
+      console.log(e);
+    }
+  }, [])
 
   return (
     <Blog />

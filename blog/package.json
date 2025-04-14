@@ -32,6 +32,7 @@
     "hexo-renderer-marked": "^3.0.0",
     "hexo-renderer-stylus": "^2.0.0",
     "hexo-server": "^2.0.0",
+    "hexo-site": "file:",
     "matter": "^0.2.0"
   }
 }
